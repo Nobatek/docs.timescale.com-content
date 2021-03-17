@@ -2740,8 +2740,8 @@ In this example, we shift the start of the week to a Sunday (the default is a Mo
 SELECT time_bucket('1 week', timetz, TIMESTAMPTZ '2017-12-31')
   AS one_week, avg(cpu)
 FROM metrics
-GROUP BY one_week
 WHERE time > TIMESTAMPTZ '2017-12-01'  AND time < TIMESTAMPTZ '2018-01-03'
+GROUP BY one_week
 ORDER BY one_week DESC LIMIT 10;
 ```
 
